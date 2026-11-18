@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Arranque do Protocolo e Ligações Globais (init.js)
+   células químicas — Arranque do Protocolo e Ligações Globais (init.js)
    ============================================================ */
 (function bootSequence() {
   const boot = document.getElementById('boot');
@@ -134,6 +134,6 @@ if (!S.createdAt) {
 }
 
 /* Ficheiro .nojekyll garante que o GitHub Pages serve todas as pastas sem filtros */
-console.info('%cCÉLULAS ELETROQUÍMICAS%c · protocolo eletroquímico carregado',
+console.info('%ccélulas químicas%c · protocolo químico carregado',
   'background:#5eead4;color:#04120f;padding:2px 6px;border-radius:3px;font-weight:700',
   'color:#9aa8c7');
