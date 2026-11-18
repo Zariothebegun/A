@@ -966,7 +966,7 @@ function renderM5(root, m) {
 }
 
 /* ------------------------------------------------------------
-   MÓDULO 06 — DESAFIO FINAL: O CORROSOR (3 Fases + Arte SVG Original)
+   MÓDULO 06 — DESAFIO FINAL: CORROSÃO E PROTEÇÃO CATÓDICA (3 Fases)
    ------------------------------------------------------------ */
 function renderM6(root, m) {
   const p1 = shuffle(CZ.BOSS_Q.filter(q => q.phase === 1)).slice(0, 3);
@@ -999,14 +999,14 @@ function renderM6(root, m) {
           <span class="hud-stat">Turno ${turn + 1}/${battleDeck.length}</span>
         `)}
 
-        <div class="desafio-arena">
-          <div class="desafio-stage-card" id="desafio-card">
+        <div class="boss-arena">
+          <div class="boss-stage-card" id="desafio-card">
             <div class="kicker" style="border-color:${phaseColor};color:${phaseColor}">
-              ENTIDADE ENTRÓPICA · O CORROSOR
+              DESAFIO FINAL · CORROSÃO E PROTEÇÃO CATÓDICA
             </div>
 
-            <!-- Arte Vetorial Original do Desafio a corrosão -->
-            <svg class="desafio-svg" viewBox="0 0 320 300" aria-label="Desafio a corrosão">
+            <!-- Esquema ilustrativo de corrosão e proteção catódica -->
+            <svg class="boss-svg" viewBox="0 0 320 300" aria-label="Desafio de proteção catódica">
               <defs>
                 <radialGradient id="desafioAura" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stop-color="${phaseColor}" stop-opacity="0.5"/>
@@ -1030,7 +1030,7 @@ function renderM6(root, m) {
             <div class="hp-bars">
               <div class="hp-row">
                 <div class="hp-label">
-                  <span style="color:#fda4af">Integridade d'a corrosão (Fe₂O₃·xH₂O)</span>
+                  <span style="color:#fda4af">Proteção catódica (Fe₂O₃·xH₂O)</span>
                   <strong>${Math.max(0, desafioHP)}%</strong>
                 </div>
                 <div class="hp-track"><div class="hp-fill is-desafio" style="width:${Math.max(0, desafioHP)}%"></div></div>
