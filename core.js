@@ -442,7 +442,7 @@ function router() {
   const app = $('#app');
   if (!app) return;
 
-  const raw = (location.hash || '#/').replace(/^#/, '');
+  const raw = (location.hash || '#/').replace(/^#/, '').split('?')[0];
   const parts = raw.split('/').filter(Boolean);
   updateHUD();
   window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
