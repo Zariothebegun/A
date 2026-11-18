@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULA ZERO — Base de Dados Científica e de Jogo (data.js)
+   CÉLULAS ELETROQUÍMICAS — Conteúdos de Físico-Química (data.js)
    Tudo rigorosamente em Português de Portugal (PT-PT)
    ============================================================ */
 window.CZ = window.CZ || {};
@@ -92,34 +92,34 @@ CZ.METAL_BY_ID = Object.fromEntries(CZ.METALS.map(m => [m.id, m]));
 
 CZ.MISSIONS = [
   {
-    id: 'm1', code: 'MÓDULO 01', title: 'Anatomia da Célula',
+    id: 'm1', code: 'MÓDULO 01', title: 'Estrutura de uma Célula',
     icon: 'atom', accent: '#5eead4', xp: 140,
-    desc: 'Inspeciona os 7 órgãos vitais da Pilha de Daniell e repara as fugas iónicas na ponte salina e nos elétrodos.'
+    desc: 'Explora os componentes de uma pilha de Daniell: ânodo, cátodo, soluções, fio condutor e ponte salina.'
   },
   {
-    id: 'm2', code: 'MÓDULO 02', title: 'Caça-Eletrões',
+    id: 'm2', code: 'MÓDULO 02', title: 'Oxidação ou Redução?',
     icon: 'bolt', accent: '#38bdf8', xp: 160,
-    desc: ' Interceta impulsos de dados em tempo real: distingue oxidação, redução, oxidante e redutor sem perder vidas.'
+    desc: ' Distingue oxidação de redução e identifica os agentes oxidante e redutor.'
   },
   {
-    id: 'm3', code: 'MÓDULO 03', title: 'Engenharia de Pilhas',
+    id: 'm3', code: 'MÓDULO 03', title: 'Constrói uma Pilha',
     icon: 'beaker', accent: '#a78bfa', xp: 200,
-    desc: 'Cumpre 4 contratos no simulador eletroquímico: calibra tensões, aplica proteção catódica e executa eletrólise.'
+    desc: 'Experimenta diferentes metais, calcula a diferença de potencial e observa a eletrólise.'
   },
   {
-    id: 'm4', code: 'MÓDULO 04', title: 'Radar de Reações',
+    id: 'm4', code: 'MÓDULO 04', title: 'Previsão de Reações',
     icon: 'radar', accent: '#34d399', xp: 180,
-    desc: 'Analisa sistemas redox com base na série eletroquímica e prevê quais reações ocorrem espontaneamente (ΔE° > 0).'
+    desc: 'Utiliza os potenciais padrão de redução para prever se uma reação é espontânea.'
   },
   {
-    id: 'm5', code: 'MÓDULO 05', title: 'Câmara de Validação',
+    id: 'm5', code: 'MÓDULO 05', title: 'Desafio de Conhecimentos',
     icon: 'quiz', accent: '#fbbf24', xp: 220,
-    desc: 'Supera 10 questões científicas de nível exame nacional com apoio tático de 3 power-ups laboratoriais.'
+    desc: 'Consolida os conceitos com perguntas sobre pilhas, eletrólise e reações redox.'
   },
   {
-    id: 'm6', code: 'BOSS FINAL', title: 'O Corrosor',
+    id: 'm6', code: 'DESAFIO FINAL', title: 'Desafio Final',
     icon: 'skull', accent: '#fb7185', xp: 350, boss: true,
-    desc: 'Enfrenta a entidade entrópica que oxida a Célula Mestra num duelo eletroquímico em três fases críticas.'
+    desc: 'Resolve o desafio final com perguntas sobre os conceitos fundamentais das células eletroquímicas.'
   }
 ];
 
@@ -143,7 +143,7 @@ CZ.BADGES = [
   { id: 'electrolyzer', icon: 'refresh', title: 'Inversor de Faraday', desc: 'Testaste o regime de eletrólise forçada no simulador.' },
   { id: 'radar_ace', icon: 'radar', title: 'Olho Termodinâmico', desc: 'Concluíste o Radar de Espontaneidade com precisão ≥ 80%.' },
   { id: 'quiz_flawless', icon: 'quiz', title: 'Rigor de Exame', desc: 'Obtiveste pelo menos 90% na Câmara de Validação.' },
-  { id: 'corrosor_slayer', icon: 'shield', title: 'Purificador do Núcleo', desc: 'Derrotaste O Corrosor e estabilizaste a Célula Mestra.' },
+  { id: 'corrosor_slayer', icon: 'shield', title: 'Especialista em Eletroquímica', desc: 'Derrotaste O Corrosor e estabilizaste a Célula Mestra.' },
   { id: 'archivist', icon: 'book', title: 'Leitor do Protocolo', desc: 'Validaste pelo menos 4 checkpoints científicos no Arquivo.' },
   { id: 'scholar_all', icon: 'award', title: 'Enciclopédia Viva', desc: 'Validaste todos os 12 capítulos do Arquivo Científico.' },
   { id: 'grade_20', icon: 'star', title: 'Excelência Nível 20', desc: 'Reparaste os 6 módulos da Célula Mestra (100% de integridade).' }
