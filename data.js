@@ -131,7 +131,7 @@ CZ.LEVELS = [
   { lvl: 5, min: 900, title: 'Especialista de Nernst' },
   { lvl: 6, min: 1250, title: 'Comandante de Faraday' },
   { lvl: 7, min: 1650, title: 'Guardião Catódico' },
-  { lvl: 8, min: 2100, title: 'Arquiteto Eletroquímico · Nota 20' }
+  { lvl: 8, min: 2100, title: 'Arquiteto químico · Nota 20' }
 ];
 
 CZ.BADGES = [
@@ -143,7 +143,7 @@ CZ.BADGES = [
   { id: 'electrolyzer', icon: 'refresh', title: 'Inversor de Faraday', desc: 'Testaste o regime de eletrólise forçada no simulador.' },
   { id: 'radar_ace', icon: 'radar', title: 'Olho Termodinâmico', desc: 'Concluíste o Radar de Espontaneidade com precisão ≥ 80%.' },
   { id: 'quiz_flawless', icon: 'quiz', title: 'Rigor de Exame', desc: 'Obtiveste pelo menos 90% na Teste de Conhecimentos.' },
-  { id: 'corrosor_slayer', icon: 'shield', title: 'Especialista em Eletroquímica', desc: 'Derrotaste a corrosão e estabilizaste a pilha galvânica.' },
+  { id: 'corrosor_slayer', icon: 'shield', title: 'Especialista em química', desc: 'Derrotaste a corrosão e estabilizaste a pilha galvânica.' },
   { id: 'archivist', icon: 'book', title: 'Leitor do Protocolo', desc: 'Validaste pelo menos 4 checkpoints científicos no Arquivo.' },
   { id: 'scholar_all', icon: 'award', title: 'Enciclopédia Viva', desc: 'Validaste todos os 12 capítulos do Arquivo Científico.' },
   { id: 'grade_20', icon: 'star', title: 'Excelência Nível 20', desc: 'Reparaste os 6 módulos da pilha galvânica (100% de integridade).' }
@@ -237,7 +237,7 @@ CZ.M2_STATEMENTS = [
   { s: 'Na pilha de Daniell, os aniões da ponte salina migram para o compartimento do ânodo.', isTrue: true, exp: 'Verdadeiro! Compensam o excesso de carga positiva dos iões Zn²⁺ recém-formados.' },
   { s: 'O cobre metálico dissolve-se espontaneamente em HCl(aq) diluído libertando H₂(g).', isTrue: false, exp: 'Falso! Como E°(Cu²⁺/Cu) = +0,34 V > E°(H⁺/H₂) = 0,00 V, o H⁺ não consegue oxidar o cobre.' },
   { s: 'Numa substância elementar como O₂(g) ou Zn(s), o número de oxidação dos átomos é sempre zero.', isTrue: true, exp: 'Exato! Qualquer elemento no estado livre/elementar tem n.o. = 0.' },
-  { s: 'Quando uma pilha atinge o equilíbrio químico (Q = K), a diferença de potencial passa a 0,00 V.', isTrue: true, exp: 'Correto! Uma "pilha gasta" é um sistema eletroquímico que atingiu o equilíbrio químico (E = 0 V).' },
+  { s: 'Quando uma pilha atinge o equilíbrio químico (Q = K), a diferença de potencial passa a 0,00 V.', isTrue: true, exp: 'Correto! Uma "pilha gasta" é um sistema químico que atingiu o equilíbrio químico (E = 0 V).' },
   { s: 'A constante de Faraday (F ≈ 96 485 C/mol) representa a carga elétrica de 1 mole de eletrões.', isTrue: true, exp: 'Exato! F = N_A × e ≈ 96 485 C·mol⁻¹.' },
   { s: 'Na redução ocorre um aumento algébrico do número de oxidação da espécie.', isTrue: false, exp: 'Falso! Redução significa diminuição do número de oxidação por ganho de eletrões.' },
   { s: 'O zinco reduz os iões Ag⁺(aq) espontaneamente em solução aquosa.', isTrue: true, exp: 'Certo! ΔE° = +0,80 − (−0,76) = +1,56 V > 0.' },
@@ -345,7 +345,7 @@ CZ.QUIZ = [
   },
   {
     id: 4, topic: 'galvanica', diff: 1,
-    q: 'Qual é a função principal da ponte salina numa pilha eletroquímica?',
+    q: 'Qual é a função principal da ponte salina numa pilha química?',
     o: ['Conduzir eletrões livres diretamente entre os dois gobelés', 'Aumentar a temperatura das soluções para acelerar a reação', 'Manter a eletroneutralidade elétrica das semicélulas por migração iónica', 'Oxidar o metal do cátodo'],
     a: 2, hint: 'Sem ela acumulam-se cargas opostas nos dois gobelés.',
     exp: 'A ponte salina fornece catiões ao compartimento catódico e aniões ao compartimento anódico, impedindo a polarização por carga espacial.'
@@ -676,7 +676,7 @@ CZ.BOSS_Q = [
     phase: 3, attack: 'SOBRECARGA FINAL DO CORROSOR',
     q: 'Golpe Crítico! Qual combinação entre os nossos elétrodos produz a MAIOR força eletromotriz teórica padrão?',
     o: ['Lítio (−3,04 V) e Ouro (+1,50 V) → ΔE° = 4,54 V', 'Zinco (−0,76 V) e Cobre (+0,34 V) → ΔE° = 1,10 V', 'Magnésio (−2,37 V) e Prata (+0,80 V) → ΔE° = 3,17 V', 'Ferro (−0,44 V) e Níquel (−0,25 V) → ΔE° = 0,19 V'],
-    a: 0, exp: 'E°máx = +1,50 − (−3,04) = +4,54 V — os dois extremos da nossa série eletroquímica!'
+    a: 0, exp: 'E°máx = +1,50 − (−3,04) = +4,54 V — os dois extremos da nossa série de potenciais de redução!'
   },
   {
     phase: 3, attack: 'ESPELHO DE DISMUTAÇÃO',
@@ -697,7 +697,7 @@ CZ.BOSS_Q = [
     a: 0, exp: 'Na descarga o ânodo oxida-se libertando e⁻ para o circuito externo e Li⁺ através do separador poroso até intercalar no cátodo!'
   },
   {
-    phase: 3, attack: 'DESAFIO FINAL DE ELETROQUÍMICA',
+    phase: 3, attack: 'DESAFIO FINAL DE química',
     q: 'Questão final! Uma corrente de 9,65 A passa durante 100 s numa solução de AgNO₃ (F = 96 500 C/mol; M(Ag) = 108 g/mol). Que massa de prata pura sela o núcleo?',
     o: ['1,08 g', '0,54 g', '10,8 g', '2,16 g'],
     a: 0, exp: 'Q = 9,65 × 100 = 965 C ⇒ n(e⁻) = 965 / 96500 = 0,010 mol ⇒ n(Ag) = 0,010 mol ⇒ m = 1,08 g! Cálculo concluído!'
@@ -712,7 +712,7 @@ CZ.GLOSSARY = [
   { term: 'Agente Redutor', cat: 'Redox', formula: 'Cede e⁻ (sofre oxidação)', codex: 'redox', def: 'Espécie química que provoca a redução de outra ao ceder-lhe eletrões, sofrendo ela própria oxidação.' },
   { term: 'Número de Oxidação (n.o.)', cat: 'Redox', formula: 'Σ n.o. = carga da espécie', codex: 'redox', def: 'Carga elétrica formal que um átomo adquiriria se os eletrões de cada ligação fossem atribuídos ao átomo mais eletronegativo.' },
   { term: 'Dismutação', cat: 'Redox', formula: '2 H₂O₂ → 2 H₂O + O₂', codex: 'redox', def: 'Reação redox em que um mesmo elemento químico numa dada espécie é simultaneamente oxidado e reduzido.' },
-  { term: 'Célula Galvânica (Pilha)', cat: 'Pilhas', formula: 'ΔG < 0  ⇒  E > 0', codex: 'anatomia', def: 'Dispositivo eletroquímico que converte energia química em energia elétrica através de uma reação redox espontânea.' },
+  { term: 'Célula Galvânica (Pilha)', cat: 'Pilhas', formula: 'ΔG < 0  ⇒  E > 0', codex: 'anatomia', def: 'Dispositivo químico que converte energia química em energia elétrica através de uma reação redox espontânea.' },
   { term: 'Célula Eletrolítica', cat: 'Eletrólise', formula: 'ΔG > 0 (fonte externa)', codex: 'eletrolise', def: 'Dispositivo onde uma fonte elétrica externa força a ocorrência de uma reação redox não espontânea.' },
   { term: 'Ânodo', cat: 'Pilhas', formula: 'Local da Oxidação', codex: 'anatomia', def: 'Elétrodo onde ocorre sempre a semirreação de oxidação. É negativo (−) nas pilhas galvânicas e positivo (+) na eletrólise.' },
   { term: 'Cátodo', cat: 'Pilhas', formula: 'Local da Redução', codex: 'anatomia', def: 'Elétrodo onde ocorre sempre a semirreação de redução. É positivo (+) nas pilhas galvânicas e negativo (−) na eletrólise.' },
@@ -721,7 +721,7 @@ CZ.GLOSSARY = [
   { term: 'Força Eletromotriz (fem)', cat: 'Potenciais', formula: 'E_célula = E_cátodo − E_ânodo', codex: 'potenciais', def: 'Diferença de potencial máxima entre os terminais de uma pilha em circuito aberto (corrente nula).' },
   { term: 'Potencial Padrão de Redução (E°)', cat: 'Potenciais', formula: '25 °C, 1 mol/dm³, 1 bar', codex: 'potenciais', def: 'Tendência relativa de um par conjugado para sofrer redução, medida face ao Elétrodo Padrão de Hidrogénio em condições padrão.' },
   { term: 'Elétrodo Padrão de Hidrogénio (EPH)', cat: 'Potenciais', formula: 'E°(H⁺/H₂) = 0,00 V', codex: 'potenciais', def: 'Elétrodo de referência primário constituído por platina platinada mergulhada em [H⁺] = 1 M sob H₂(g) a 1 bar.' },
-  { term: 'Série Eletroquímica', cat: 'Potenciais', formula: 'Ordenação por E°', codex: 'potenciais', def: 'Tabela que ordena os pares oxidante/redutor segundo os seus potenciais padrão de redução, permitindo prever espontaneidade.' },
+  { term: 'série de potenciais de redução', cat: 'Potenciais', formula: 'Ordenação por E°', codex: 'potenciais', def: 'Tabela que ordena os pares oxidante/redutor segundo os seus potenciais padrão de redução, permitindo prever espontaneidade.' },
   { term: 'Notação Esquema IUPAC', cat: 'Pilhas', formula: 'Ânodo | Sol. || Sol. | Cátodo', codex: 'daniell', def: 'Representação simbólica de uma célula: uma barra vertical | indica mudança de fase e duas barras || indicam a ponte salina.' },
   { term: 'Equação de Nernst', cat: 'Termodinâmica', formula: 'E = E° − (RT/nF) ln Q', codex: 'fatores', def: 'Relação matemática que permite calcular o potencial de uma célula fora das condições padrão em função da temperatura e de Q.' },
   { term: 'Energia de Gibbs (ΔG)', cat: 'Termodinâmica', formula: 'ΔG = −n · F · E', codex: 'potenciais', def: 'Potencial termodinâmico que mede o trabalho elétrico máximo útil (a P e T constantes); ΔG < 0 indica espontaneidade.' },
@@ -731,9 +731,9 @@ CZ.GLOSSARY = [
   { term: 'Galvanoplastia', cat: 'Eletrólise', formula: 'Eletrodeposição catódica', codex: 'eletrolise', def: 'Técnica eletrolítica usada para revestir uma peça condutora (cátodo) com uma camada fina de outro metal (cromagem, prateação, douradura).' },
   { term: 'Eletrólito', cat: 'Pilhas', formula: 'Condutor de 2.ª espécie', codex: 'base', def: 'Substância fundida ou dissolvida que contém iões móveis capazes de conduzir corrente elétrica.' },
   { term: 'Elétrodo Inerte', cat: 'Pilhas', formula: 'Pt(s) ou Grafite C(s)', codex: 'anatomia', def: 'Condutor sólido que permite trocar eletrões com espécies em solução/gás sem participar quimicamente na reação global.' },
-  { term: 'Acumulador (Bateria Secundária)', cat: 'Baterias', formula: 'Descarga ⇄ Carga', codex: 'baterias', def: 'Gerador eletroquímico reversível que funciona como célula galvânica na descarga e como célula eletrolítica na recarga.' },
+  { term: 'Acumulador (Bateria Secundária)', cat: 'Baterias', formula: 'Descarga ⇄ Carga', codex: 'baterias', def: 'Gerador químico reversível que funciona como célula galvânica na descarga e como célula eletrolítica na recarga.' },
   { term: 'Pilha de Combustível', cat: 'Baterias', formula: '2 H₂ + O₂ → 2 H₂O', codex: 'baterias', def: 'Célula galvânica aberta alimentada continuamente por reagentes externos (ex.: hidrogénio e oxigénio) sem se esgotar.' },
-  { term: 'Corrosão Metálica', cat: 'Corrosão', formula: 'Oxidação indesejada', codex: 'ambiente', def: 'Deterioração espontânea de um metal (como a ferrugem do ferro) por reação eletroquímica com agentes oxidantes do meio ambiente.' },
+  { term: 'Corrosão Metálica', cat: 'Corrosão', formula: 'Oxidação indesejada', codex: 'ambiente', def: 'Deterioração espontânea de um metal (como a ferrugem do ferro) por reação química com agentes oxidantes do meio ambiente.' },
   { term: 'Proteção Catódica', cat: 'Corrosão', formula: 'Ânodo de Sacrifício (Zn, Mg)', codex: 'ambiente', def: 'Método que impede a corrosão de uma estrutura metálica tornando-a o cátodo de uma célula através de um metal mais redutor ou corrente impressa.' },
   { term: 'Passivação', cat: 'Corrosão', formula: 'Película Al₂O₃ / Cr₂O₃', codex: 'ambiente', def: 'Formação espontânea de uma camada superficial de óxido ultrafina, compacta e aderente que protege metais como Al, Ti ou aço inox.' }
 ];
