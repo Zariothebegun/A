@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Simulador (#/lab) e Missões 1 a 6 (missions.js)
+   CÉLULAS QUÍMICAS — Simulador (#/lab) e Missões 1 a 6 (missions.js)
    ============================================================ */
 
 function renderLab(root) {
@@ -1037,7 +1037,7 @@ function renderM6(root, m) {
               </div>
               <div class="hp-row">
                 <div class="hp-label">
-                  <span style="color:var(--teal)">Escudo Catódico da célula eletroquímica</span>
+                  <span style="color:var(--teal)">Escudo Catódico da célula química</span>
                   <strong>${Math.max(0, shieldHP)}%</strong>
                 </div>
                 <div class="hp-track"><div class="hp-fill is-player" style="width:${Math.max(0, shieldHP)}%"></div></div>
@@ -1133,7 +1133,7 @@ function renderM6(root, m) {
     const { earnedXP } = completeMission('m6', { score, stars, xp: m.xp });
     root.innerHTML = `<div class="container">${missionCompleteScreen({
       mission: m, score, stars, earnedXP, nextId: null,
-      summary: 'a corrosão foi neutralizado por proteção catódica total! A célula eletroquímica volta a iluminar a circuito elétrico!'
+      summary: 'a corrosão foi neutralizado por proteção catódica total! A célula química volta a iluminar a circuito elétrico!'
     })}</div>`;
     bindRetry(root, () => renderM6(root, m));
   }
