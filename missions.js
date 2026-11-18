@@ -966,7 +966,7 @@ function renderM5(root, m) {
 }
 
 /* ------------------------------------------------------------
-   MÓDULO 06 — BOSS FINAL: O CORROSOR (3 Fases + Arte SVG Original)
+   MÓDULO 06 — DESAFIO FINAL: O CORROSOR (3 Fases + Arte SVG Original)
    ------------------------------------------------------------ */
 function renderM6(root, m) {
   const p1 = shuffle(CZ.BOSS_Q.filter(q => q.phase === 1)).slice(0, 3);
@@ -975,12 +975,12 @@ function renderM6(root, m) {
   const battleDeck = [...p1, ...p2, ...p3]; /* 10 turnos decisivos */
 
   let turn = 0;
-  let bossHP = 100;
+  let desafioHP = 100;
   let shieldHP = 100;
   let locked = false;
 
   function renderTurn() {
-    if (bossHP <= 0 || turn >= battleDeck.length) {
+    if (desafioHP <= 0 || turn >= battleDeck.length) {
       if (shieldHP > 0) return victory();
     }
     if (shieldHP <= 0) {
@@ -999,21 +999,21 @@ function renderM6(root, m) {
           <span class="hud-stat">Turno ${turn + 1}/${battleDeck.length}</span>
         `)}
 
-        <div class="boss-arena">
-          <div class="boss-stage-card" id="boss-card">
+        <div class="desafio-arena">
+          <div class="desafio-stage-card" id="desafio-card">
             <div class="kicker" style="border-color:${phaseColor};color:${phaseColor}">
               ENTIDADE ENTRÓPICA · O CORROSOR
             </div>
 
-            <!-- Arte Vetorial Original do Boss O Corrosor -->
-            <svg class="boss-svg" viewBox="0 0 320 300" aria-label="Boss O Corrosor">
+            <!-- Arte Vetorial Original do Desafio a corrosão -->
+            <svg class="desafio-svg" viewBox="0 0 320 300" aria-label="Desafio a corrosão">
               <defs>
-                <radialGradient id="bossAura" cx="50%" cy="50%" r="50%">
+                <radialGradient id="desafioAura" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stop-color="${phaseColor}" stop-opacity="0.5"/>
                   <stop offset="100%" stop-color="#090612" stop-opacity="0"/>
                 </radialGradient>
               </defs>
-              <circle cx="160" cy="150" r="130" fill="url(#bossAura)"/>
+              <circle cx="160" cy="150" r="130" fill="url(#desafioAura)"/>
               <g style="transform-origin:160px 150px;animation:czSpin ${14 - cur.phase * 3}s linear infinite">
                 <polygon points="160,28 190,62 242,48 232,100 282,126 246,166 268,216 214,222 192,270 160,236 128,270 106,222 52,216 74,166 38,126 88,100 78,48 130,62"
                          fill="rgba(36,12,26,0.88)" stroke="${phaseColor}" stroke-width="2.5"/>
@@ -1030,14 +1030,14 @@ function renderM6(root, m) {
             <div class="hp-bars">
               <div class="hp-row">
                 <div class="hp-label">
-                  <span style="color:#fda4af">Integridade d'O Corrosor (Fe₂O₃·xH₂O)</span>
-                  <strong>${Math.max(0, bossHP)}%</strong>
+                  <span style="color:#fda4af">Integridade d'a corrosão (Fe₂O₃·xH₂O)</span>
+                  <strong>${Math.max(0, desafioHP)}%</strong>
                 </div>
-                <div class="hp-track"><div class="hp-fill is-boss" style="width:${Math.max(0, bossHP)}%"></div></div>
+                <div class="hp-track"><div class="hp-fill is-desafio" style="width:${Math.max(0, desafioHP)}%"></div></div>
               </div>
               <div class="hp-row">
                 <div class="hp-label">
-                  <span style="color:var(--teal)">Escudo Catódico da Célula Zero</span>
+                  <span style="color:var(--teal)">Escudo Catódico da célula eletroquímica</span>
                   <strong>${Math.max(0, shieldHP)}%</strong>
                 </div>
                 <div class="hp-track"><div class="hp-fill is-player" style="width:${Math.max(0, shieldHP)}%"></div></div>
@@ -1062,7 +1062,7 @@ function renderM6(root, m) {
               </div>
             </div>
 
-            <div id="boss-fb"></div>
+            <div id="desafio-fb"></div>
           </div>
         </div>
       </div>
@@ -1080,25 +1080,25 @@ function renderM6(root, m) {
         });
 
         if (ok) {
-          bossHP = Math.max(0, bossHP - 10);
-          Sound.play('bossHit');
-          $('#boss-card', root)?.classList.add('is-hit');
+          desafioHP = Math.max(0, desafioHP - 10);
+          Sound.play('desafioHit');
+          $('#desafio-card', root)?.classList.add('is-hit');
         } else {
           btn.classList.add('is-wrong');
           shieldHP = Math.max(0, shieldHP - 25);
           Sound.play('playerHit');
         }
 
-        $('#boss-fb', root).innerHTML = `
+        $('#desafio-fb', root).innerHTML = `
           <div class="feedback-banner ${ok ? '' : 'is-bad'}">
-            <strong>${ok ? 'Contra-Ataque Catódico Certeiro! (−10% HP Boss)' : 'Dano Corrosivo no Escudo! (−25% Escudo)'}</strong>
+            <strong>${ok ? 'Contra-Ataque Catódico Certeiro! (−10% HP Desafio)' : 'Dano Corrosivo no Escudo! (−25% Escudo)'}</strong>
             ${esc(cur.exp)}
             <div style="margin-top:12px;text-align:right">
-              <button type="button" class="btn btn-primary btn-sm" id="boss-next">Continuar Duelo →</button>
+              <button type="button" class="btn btn-primary btn-sm" id="desafio-next">Continuar Duelo →</button>
             </div>
           </div>
         `;
-        $('#boss-next', root).addEventListener('click', () => {
+        $('#desafio-next', root).addEventListener('click', () => {
           turn++;
           renderTurn();
         });
@@ -1107,17 +1107,17 @@ function renderM6(root, m) {
   }
 
   function defeat() {
-    awardBest('m6', 100 - bossHP);
+    awardBest('m6', 100 - desafioHP);
     root.innerHTML = `
       <div class="container">
         <div class="complete-card view-enter" style="border-color:rgba(251,113,133,0.5)">
           <div class="kicker" style="color:var(--rose)">ESCUDO PERFURADO</div>
-          <h2 class="section-title">O Corrosor oxidou o núcleo!</h2>
+          <h2 class="section-title">a corrosão oxidou o núcleo!</h2>
           <p class="section-lead" style="margin:0 auto 22px">
-            Reduziste a integridade d'O Corrosor até ${bossHP}%. Recalibra os potenciais padrão e volta ao ataque!
+            Reduziste a integridade d'a corrosão até ${desafioHP}%. Recalibra os potenciais padrão e volta ao ataque!
           </p>
           <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-            <button type="button" class="btn btn-primary" data-retry>${icon('refresh')} Reenfrentar O Corrosor</button>
+            <button type="button" class="btn btn-primary" data-retry>${icon('refresh')} Reenfrentar a corrosão</button>
             <a href="#/codex" class="btn">${icon('book')} Rever Arquivo</a>
           </div>
         </div>
@@ -1133,7 +1133,7 @@ function renderM6(root, m) {
     const { earnedXP } = completeMission('m6', { score, stars, xp: m.xp });
     root.innerHTML = `<div class="container">${missionCompleteScreen({
       mission: m, score, stars, earnedXP, nextId: null,
-      summary: 'O Corrosor foi neutralizado por proteção catódica total! A Célula Zero volta a iluminar a rede de 2087!'
+      summary: 'a corrosão foi neutralizado por proteção catódica total! A célula eletroquímica volta a iluminar a circuito elétrico!'
     })}</div>`;
     bindRetry(root, () => renderM6(root, m));
   }
