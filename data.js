@@ -118,7 +118,7 @@ CZ.MISSIONS = [
   },
   {
     id: 'm6', code: 'DESAFIO FINAL', title: 'Desafio Final',
-    icon: 'skull', accent: '#fb7185', xp: 350, boss: true,
+    icon: 'skull', accent: '#fb7185', xp: 350, desafio: true,
     desc: 'Resolve o desafio final com perguntas sobre os conceitos fundamentais das células eletroquímicas.'
   }
 ];
@@ -135,18 +135,18 @@ CZ.LEVELS = [
 ];
 
 CZ.BADGES = [
-  { id: 'first_spark', icon: 'bolt', title: 'Primeira Faísca', desc: 'Concluíste o primeiro módulo de reparação da Célula Zero.' },
+  { id: 'first_spark', icon: 'bolt', title: 'Primeira Faísca', desc: 'Concluíste o primeiro módulo de estudo das células eletroquímicas.' },
   { id: 'anatomist', icon: 'atom', title: 'Cirurgião Galvânico', desc: 'Diagnosticaste todos os 7 componentes da célula sem falhas.' },
   { id: 'electron_hunter', icon: 'flame', title: 'Combo Quântico', desc: 'Atingiste uma série de 6 respostas seguidas no Caça-Eletrões.' },
   { id: 'daniell_master', icon: 'beaker', title: 'Mestre de Daniell', desc: 'Cumpriste todos os contratos de Engenharia de Pilhas.' },
   { id: 'high_voltage', icon: 'sparkles', title: 'Alta Tensão (> 3,5 V)', desc: 'Montaste uma pilha com força eletromotriz superior a 3,50 V no simulador.' },
   { id: 'electrolyzer', icon: 'refresh', title: 'Inversor de Faraday', desc: 'Testaste o regime de eletrólise forçada no simulador.' },
   { id: 'radar_ace', icon: 'radar', title: 'Olho Termodinâmico', desc: 'Concluíste o Radar de Espontaneidade com precisão ≥ 80%.' },
-  { id: 'quiz_flawless', icon: 'quiz', title: 'Rigor de Exame', desc: 'Obtiveste pelo menos 90% na Câmara de Validação.' },
-  { id: 'corrosor_slayer', icon: 'shield', title: 'Especialista em Eletroquímica', desc: 'Derrotaste O Corrosor e estabilizaste a Célula Mestra.' },
+  { id: 'quiz_flawless', icon: 'quiz', title: 'Rigor de Exame', desc: 'Obtiveste pelo menos 90% na Teste de Conhecimentos.' },
+  { id: 'corrosor_slayer', icon: 'shield', title: 'Especialista em Eletroquímica', desc: 'Derrotaste a corrosão e estabilizaste a pilha galvânica.' },
   { id: 'archivist', icon: 'book', title: 'Leitor do Protocolo', desc: 'Validaste pelo menos 4 checkpoints científicos no Arquivo.' },
   { id: 'scholar_all', icon: 'award', title: 'Enciclopédia Viva', desc: 'Validaste todos os 12 capítulos do Arquivo Científico.' },
-  { id: 'grade_20', icon: 'star', title: 'Excelência Nível 20', desc: 'Reparaste os 6 módulos da Célula Mestra (100% de integridade).' }
+  { id: 'grade_20', icon: 'star', title: 'Excelência Nível 20', desc: 'Reparaste os 6 módulos da pilha galvânica (100% de integridade).' }
 ];
 
 /* Missão 1 — 7 Órgãos da Célula Galvânica Zn/Cu */
@@ -604,17 +604,17 @@ CZ.QUIZ = [
   }
 ];
 
-/* Missão 6 — 16 Perguntas de Combate contra O Corrosor (3 Fases) */
+/* Missão 6 — 16 Perguntas de Combate contra a corrosão (3 Fases) */
 CZ.BOSS_Q = [
   {
     phase: 1, attack: 'ONDA DE FERRUGEM ÁCIDA',
-    q: 'O Corrosor injeta ácido num tanque de aço! Qual destes blocos devemos soldar ao aço para o proteger por ânodo de sacrifício (E°Fe = −0,44 V)?',
+    q: 'a corrosão injeta ácido num tanque de aço! Qual destes blocos devemos soldar ao aço para o proteger por ânodo de sacrifício (E°Fe = −0,44 V)?',
     o: ['Cobre (E° = +0,34 V)', 'Magnésio (E° = −2,37 V)', 'Prata (E° = +0,80 V)', 'Ouro (E° = +1,50 V)'],
     a: 1, exp: 'O magnésio tem E° muito inferior ao ferro (−2,37 V < −0,44 V), oxidando-se no lugar do aço!'
   },
   {
     phase: 1, attack: 'RUPTURA DA PONTE IÓNICA',
-    q: 'O Corrosor drena a ponte salina de KNO₃! O que acontece de imediato na célula se não a repusermos?',
+    q: 'a corrosão drena a ponte salina de KNO₃! O que acontece de imediato na célula se não a repusermos?',
     o: ['A diferença de potencial útil cai a zero por acumulação de cargas nas soluções', 'Os eletrões passam a saltar pelo ar a 100 V', 'O cátodo transforma-se em sódio', 'A corrente triplica'],
     a: 0, exp: 'Sem migração de iões na ponte salina, perde-se a eletroneutralidade e o fluxo eletrónico estanca instantaneamente.'
   },
@@ -638,19 +638,19 @@ CZ.BOSS_Q = [
   },
   {
     phase: 2, attack: 'DRENAGEM DE NERNST',
-    q: 'O Corrosor aumentou [Zn²⁺] para 10 M e baixou [Cu²⁺] para 0,001 M na pilha Zn/Cu! Como varia E relativamente a 1,10 V (a 25 °C)?',
+    q: 'a corrosão aumentou [Zn²⁺] para 10 M e baixou [Cu²⁺] para 0,001 M na pilha Zn/Cu! Como varia E relativamente a 1,10 V (a 25 °C)?',
     o: ['Diminui cerca de 0,12 V, ficando próximo de 0,98 V', 'Aumenta para 2,20 V', 'Mantém-se exatamente em 1,10 V', 'Passa a +10,0 V'],
     a: 0, exp: 'Q = 10 / 10⁻³ = 10⁴. E = 1,10 − (0,0592/2)·log(10⁴) = 1,10 − 0,0296 × 4 ≈ 0,98 V!'
   },
   {
     phase: 2, attack: 'CURTO-CIRCUITO CLORETO',
-    q: 'O Corrosor tenta misturar KCl numa semicélula de AgNO₃! Que precipitado bloquearia o reator?',
+    q: 'a corrosão tenta misturar KCl numa semicélula de AgNO₃! Que precipitado bloquearia o reator?',
     o: ['KNO₃(s)', 'AgCl(s)', 'Ag₂O(s)', 'Cl₂O₇(s)'],
     a: 1, exp: 'Ag⁺(aq) + Cl⁻(aq) → AgCl(s), um precipitado branco muito insolúvel!'
   },
   {
     phase: 2, attack: 'DESCARGA FORÇADA',
-    q: 'Ativamos o modo ELETRÓLISE para regenerar a Célula Mestra! Nesse modo, qual é o sinal e o processo no ÂNODO?',
+    q: 'Ativamos o modo ELETRÓLISE para regenerar a pilha galvânica! Nesse modo, qual é o sinal e o processo no ÂNODO?',
     o: ['Polo positivo (+), onde ocorre OXIDAÇÃO', 'Polo negativo (−), onde ocorre REDUÇÃO', 'Polo negativo (−), onde ocorre OXIDAÇÃO', 'Neutro (0), sem reação'],
     a: 0, exp: 'Na eletrólise o ânodo está ligado ao polo (+) do gerador, continuando a ser o local da oxidação!'
   },
@@ -680,7 +680,7 @@ CZ.BOSS_Q = [
   },
   {
     phase: 3, attack: 'ESPELHO DE DISMUTAÇÃO',
-    q: 'O Corrosor liberta peróxido H₂O₂ → H₂O + ½ O₂! Como atua o oxigénio do H₂O₂ nesta reação?',
+    q: 'a corrosão liberta peróxido H₂O₂ → H₂O + ½ O₂! Como atua o oxigénio do H₂O₂ nesta reação?',
     o: ['Oxida-se a O₂ (0) e reduz-se a H₂O (−2) simultaneamente (dismutação)', 'Apenas o hidrogénio muda de número de oxidação', 'Não há transferência de eletrões', 'Transforma-se em azoto'],
     a: 0, exp: 'O oxigénio passa de −1 no H₂O₂ para −2 na água (redução) e 0 no O₂ (oxidação): dismutação clássica!'
   },
@@ -697,10 +697,10 @@ CZ.BOSS_Q = [
     a: 0, exp: 'Na descarga o ânodo oxida-se libertando e⁻ para o circuito externo e Li⁺ através do separador poroso até intercalar no cátodo!'
   },
   {
-    phase: 3, attack: 'EXECUÇÃO DO PROTOCOLO ZERO',
-    q: 'Último selo! Uma corrente de 9,65 A passa durante 100 s numa solução de AgNO₃ (F = 96 500 C/mol; M(Ag) = 108 g/mol). Que massa de prata pura sela o núcleo?',
+    phase: 3, attack: 'DESAFIO FINAL DE ELETROQUÍMICA',
+    q: 'Questão final! Uma corrente de 9,65 A passa durante 100 s numa solução de AgNO₃ (F = 96 500 C/mol; M(Ag) = 108 g/mol). Que massa de prata pura sela o núcleo?',
     o: ['1,08 g', '0,54 g', '10,8 g', '2,16 g'],
-    a: 0, exp: 'Q = 9,65 × 100 = 965 C ⇒ n(e⁻) = 965 / 96500 = 0,010 mol ⇒ n(Ag) = 0,010 mol ⇒ m = 1,08 g! Núcleo selado!'
+    a: 0, exp: 'Q = 9,65 × 100 = 965 C ⇒ n(e⁻) = 965 / 96500 = 0,010 mol ⇒ n(Ag) = 0,010 mol ⇒ m = 1,08 g! Cálculo concluído!'
   }
 ];
 
