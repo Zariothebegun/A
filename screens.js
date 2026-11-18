@@ -177,7 +177,7 @@ function renderHub(root) {
     <div class="container view-enter">
       <div class="hub-top">
         <div class="glass-card master-core-card">
-          <div class="kicker"><span class="kicker-dot"></span> CÉLULA ELETROQUÍMICA</div>
+          <div class="kicker"><span class="kicker-dot"></span> CÉLULAS QUÍMICAS</div>
           <svg class="master-core-svg" viewBox="0 0 200 200">
             <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(148,163,184,0.16)" stroke-width="10"/>
             <circle cx="100" cy="100" r="82" fill="none" stroke="${coreColor}" stroke-width="10"
