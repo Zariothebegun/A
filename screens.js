@@ -20,7 +20,7 @@ function renderIntro(root) {
             Explora as <strong>células químicas</strong> e aprende como funcionam as pilhas e a eletrólise. Vais conhecer as reações de <strong>oxidação-redução</strong>, os elétrodos, a ponte salina, os potenciais elétricos e a equação de Nernst através de explicações, experiências interativas e desafios.
           </p>
 
-          <a href="#/quiz" class="quiz-launch-card"><span class="quiz-launch-icon">🏆</span><span><strong>DESAFIO AO VIVO</strong><small>Cria uma sala, partilha o QR code e compete com a turma.</small></span><b>JOGAR AGORA →</b></a>
+          <a href="#/quiz" class="quiz-launch-card"><span class="quiz-launch-icon">🏆</span><span><strong>✦ DESAFIO AO VIVO ✦</strong><small>ENTRA NA ARENA • QR CODE • 4 RESPOSTAS • PONTOS</small></span><b>JOGAR AGORA ↗</b></a>
           <div class="intro-cta-row">
             <button type="button" class="btn btn-primary btn-lg" id="btn-start">
               ${icon('play')} ${S.started ? 'Continuar estudo' : 'Começar'}
