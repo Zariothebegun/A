@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULA ZERO — Motor Central: Estado, Som, Router, WebGL & FX (core.js)
+   CÉLULAS ELETROQUÍMICAS — Motor Central: Estado, Som, Router, WebGL & FX (core.js)
    ============================================================ */
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
@@ -183,7 +183,7 @@ const Sound = (() => {
         tone(440, 0.08, 'sine', 0.06, 0, 880);
         tone(880, 0.14, 'triangle', 0.06, 0.07, 1174);
         break;
-      case 'bossHit':
+      case 'desafioHit':
         tone(150, 0.18, 'sawtooth', 0.08, 0, 65);
         tone(740, 0.12, 'triangle', 0.06, 0.04, 980);
         break;
