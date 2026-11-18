@@ -13,7 +13,7 @@ function renderLab(root) {
         <div class="mh-left">
           <a href="#/hub" class="mh-back" title="Mapa de Missões">${icon('chevron-left')}</a>
           <div>
-            <div class="mh-code">BANCADA ELETROQUÍMICA INTERATIVA</div>
+            <div class="mh-code">BANCADA química INTERATIVA</div>
             <h1 class="mh-title">Simulador de Pilhas Galvânicas &amp; Eletrólise</h1>
           </div>
         </div>
@@ -718,7 +718,7 @@ function renderM4(root, m) {
       const { earnedXP } = completeMission('m4', { score, stars, xp: m.xp });
       root.innerHTML = `<div class="container">${missionCompleteScreen({
         mission: m, score, stars, earnedXP, nextId: 'm5',
-        summary: `Analisaste ${TOTAL} sistemas redox na série eletroquímica com ${score}% de precisão!`
+        summary: `Analisaste ${TOTAL} sistemas redox na série de potenciais de redução com ${score}% de precisão!`
       })}</div>`;
       bindRetry(root, () => renderM4(root, m));
       return;
@@ -856,7 +856,7 @@ function renderM5(root, m) {
           </div>
 
           <div class="quiz-card">
-            <span class="kicker"><span class="kicker-dot"></span> ${esc(CZ.TOPICS[q.topic] || 'Eletroquímica')} · NÍVEL ${q.diff}</span>
+            <span class="kicker"><span class="kicker-dot"></span> ${esc(CZ.TOPICS[q.topic] || 'química')} · NÍVEL ${q.diff}</span>
             <h2 class="quiz-q">${esc(q.q)}</h2>
 
             <div id="quiz-hint-slot"></div>
