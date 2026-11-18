@@ -1,6 +1,6 @@
 # Células Químicas — Físico-Química
 
-Site-jogo interativo, imersivo e totalmente em **português de Portugal (PT-PT)** sobre **células químicas / eletroquímica**, criado para uma apresentação escolar de excelência (**nota 20**) — sem slides, sem instalações e sem dependências externas em tempo de execução.
+Site-jogo interativo, imersivo e totalmente em **português de Portugal (PT-PT)** sobre **células químicas / química**, criado para uma apresentação escolar de excelência (**nota 20**) — sem slides, sem instalações e sem dependências externas em tempo de execução.
 
 > Recurso interativo de apoio a uma apresentação escolar sobre células químicas: pilhas galvânicas, eletrólise, oxidação-redução, elétrodos e potenciais elétricos.
 
@@ -45,7 +45,7 @@ Basta abrir o endereço em qualquer navegador moderno (Chrome, Edge, Firefox ou 
 
 - Oxidação, redução, agentes oxidante/redutor e número de oxidação;
 - Pilha de Daniell, semirreações, balanço de massa/cor e notação IUPAC;
-- Potenciais padrão de redução E°, Elétrodo Padrão de Hidrogénio e série eletroquímica;
+- Potenciais padrão de redução E°, Elétrodo Padrão de Hidrogénio e série de potenciais de redução;
 - Ponte salina e eletroneutralidade;
 - Relação ΔG° = −nFE° e espontaneidade;
 - Equação de Nernst, concentração, temperatura, pH e pilhas de concentração;
