@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Leitor do Arquivo Científico, Widgets & Calculadoras (codex.js)
+   células químicas — Leitor do Arquivo Científico, Widgets & Calculadoras (codex.js)
    ============================================================ */
 
 function mountCodexWidget(container, type) {
