@@ -198,7 +198,7 @@ function renderHub(root) {
         <div class="glass-card hub-brief">
           <div>
             <div class="kicker"><span class="kicker-dot"></span> CENTRAL DE OPERAÇÕES · ${esc(lvl.title)}</div>
-            <h1 class="section-title" style="margin-bottom:8px">Percurso de Aprendizagem em Eletroquímica</h1>
+            <h1 class="section-title" style="margin-bottom:8px">Percurso de Aprendizagem em química</h1>
             <p class="section-lead">
               Podes avançar pela ordem narrativa (Módulo 01 → Desafio Final) ou abrir diretamente qualquer módulo,
               o <strong>Simulador Livre</strong> ou o <strong>Arquivo Científico</strong> durante a tua apresentação.
@@ -241,7 +241,7 @@ function renderGlossary(root) {
   root.innerHTML = `
     <div class="container view-enter">
       <div class="kicker"><span class="kicker-dot"></span> LÉXICO CIENTÍFICO RIGOROSO</div>
-      <h1 class="section-title">Glossário de Eletroquímica (${CZ.GLOSSARY.length} Termos)</h1>
+      <h1 class="section-title">Glossário de química (${CZ.GLOSSARY.length} Termos)</h1>
       <p class="section-lead">Pesquisa definições, fórmulas e acede diretamente ao capítulo correspondente do Arquivo.</p>
 
       <div class="glossary-controls">
@@ -375,7 +375,7 @@ function renderProfile(root) {
   $('#btn-save-prof', root).addEventListener('click', () => {
     S.operatorName = $('#inp-name', root).value.trim() || 'Operador Alfa';
     S.schoolName = $('#inp-school', root).value.trim() || 'Ensino Secundário / Profissional';
-    S.className = $('#inp-class', root).value.trim() || 'Química — Eletroquímica';
+    S.className = $('#inp-class', root).value.trim() || 'Química — química';
     saveState();
     Sound.play('ok');
     toast('Perfil atualizado!', `Registado em nome de ${S.operatorName}`, 'check');
@@ -427,7 +427,7 @@ function openHowToPlay() {
         <strong>1. Seis Módulos Narrativos (#/hub):</strong> Inspeciona a anatomia da célula, caça eletrões em modo arcade, cumpre contratos de engenharia no simulador, prevê reações espontâneas, supera o quiz com power-ups e derrota <em>desafio final</em>.
       </div>
       <div class="callout" style="margin:0">
-        <strong>2. Simulador Eletroquímico Completo (#/lab):</strong> Testa 10 semicélulas reais (Li a Au), altera concentrações e temperatura (Equação de Nernst em direto!), retira a ponte salina ou comuta para Eletrólise. Pressiona a tecla <code>E</code> para ecrã inteiro!
+        <strong>2. Simulador químico Completo (#/lab):</strong> Testa 10 semicélulas reais (Li a Au), altera concentrações e temperatura (Equação de Nernst em direto!), retira a ponte salina ou comuta para Eletrólise. Pressiona a tecla <code>E</code> para ecrã inteiro!
       </div>
       <div class="callout" style="margin:0">
         <strong>3. Arquivo de 12 Capítulos + Calculadoras (#/codex):</strong> Teoria completa com calculadoras interativas de <em>fem/Gibbs</em>, <em>Nernst</em> e <em>Leis de Faraday</em>, além de leitura em voz alta e checkpoints de XP.
@@ -452,7 +452,7 @@ function openPresentationGuide() {
       <li><strong>Min 3–6 · Demonstração Ao Vivo no Simulador:</strong> <a href="#/lab" onclick="closeModal()" style="color:var(--teal)">Abrir Simulador →</a>
         <ul>
           <li>Mostra Zn/Cu (+1,10 V) e desliga a <strong>Ponte Salina</strong> ao vivo → tensão cai a 0,00 V!</li>
-          <li>Muda para <strong>Lítio + Ouro</strong> (+4,54 V) e explica a Série Eletroquímica.</li>
+          <li>Muda para <strong>Lítio + Ouro</strong> (+4,54 V) e explica a série de potenciais de redução.</li>
           <li>Altera concentrações para demonstrar a <strong>Equação de Nernst</strong> e comuta para <strong>Eletrólise</strong> mostrando a inversão de sinal (+/−) nos elétrodos!</li>
         </ul>
       </li>
@@ -476,8 +476,8 @@ function openCertificateModal() {
   openModal(`
     <div class="certificate">
       <div class="cert-seal">${icon('award')}</div>
-      <div class="cert-kicker">UNIDADE CIENTÍFICA CÉLULAS QUÍMICAS · PROTOCOLO ELETROQUÍMICO</div>
-      <h2 class="cert-title">Certificado de Proficiência em Eletroquímica</h2>
+      <div class="cert-kicker">UNIDADE CIENTÍFICA CÉLULAS QUÍMICAS · PROTOCOLO químico</div>
+      <h2 class="cert-title">Certificado de Proficiência em química</h2>
       <p style="margin:4px 0 0;color:var(--text-muted);font-size:0.9rem">Certifica-se que o(a) operador(a)</p>
       <div class="cert-name">${esc(S.operatorName)}</div>
       <p style="margin:6px auto 0;max-width:58ch;font-size:0.92rem;color:var(--text-soft)">
