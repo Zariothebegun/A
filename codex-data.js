@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Arquivo Científico Completo: 12 Capítulos (codex-data.js)
+   células químicas — Arquivo Científico Completo: 12 Capítulos (codex-data.js)
    Rigor de 12.º Ano / Ensino Secundário & Profissional (PT-PT)
    ============================================================ */
 window.CZ = window.CZ || {};
@@ -16,9 +16,9 @@ CZ.CODEX_LIST = [
     html: `
       <p>Quando mergulhamos uma placa de zinco diretamente numa solução azul de sulfato de cobre(II), ocorre uma reação espontânea de oxidação-redução: o zinco dissolve-se, deposita-se cobre avermelhado e liberta-se <strong>calor</strong>. Os eletrões passam diretamente dos átomos de zinco para os iões Cu²⁺ à superfície da placa — não há trabalho elétrico aproveitável.</p>
       <div class="callout">
-        <strong>Ideia-Chave da Eletroquímica:</strong> Se separarmos fisicamente a oxidação e a redução em dois compartimentos (semicélulas) ligados por um fio condutor e uma ponte salina, obrigamos os eletrões a viajar pelo circuito externo, convertendo <strong>energia química diretamente em energia elétrica</strong>!
+        <strong>Ideia-Chave da química:</strong> Se separarmos fisicamente a oxidação e a redução em dois compartimentos (semicélulas) ligados por um fio condutor e uma ponte salina, obrigamos os eletrões a viajar pelo circuito externo, convertendo <strong>energia química diretamente em energia elétrica</strong>!
       </div>
-      <h3>Os Dois Regimes das Células Eletroquímicas</h3>
+      <h3>Os Dois Regimes das células químicas</h3>
       <table class="codex-table">
         <thead>
           <tr><th>Característica</th><th>Célula Galvânica (Pilha)</th><th>Célula Eletrolítica (Eletrólise)</th></tr>
@@ -56,7 +56,7 @@ CZ.CODEX_LIST = [
     readTime: '4 min',
     tag: 'Estrutura',
     html: `
-      <p>Toda a célula eletroquímica é constituída por duas <strong>semicélulas</strong>. Cada semicélula reúne um condutor eletrónico (o <strong>elétrodo</strong>) em contacto com um condutor iónico (o <strong>eletrólito</strong>), formando um par conjugado oxidante/redutor.</p>
+      <p>Toda a célula química é constituída por duas <strong>semicélulas</strong>. Cada semicélula reúne um condutor eletrónico (o <strong>elétrodo</strong>) em contacto com um condutor iónico (o <strong>eletrólito</strong>), formando um par conjugado oxidante/redutor.</p>
       <div class="formula-box">
         Regra Universal IUPAC:  ÂNODO ≡ OXIDAÇÃO (Vogal-Vogal)   |   CÁTODO ≡ REDUÇÃO (Consoante-Consoante)
       </div>
@@ -159,7 +159,7 @@ CZ.CODEX_LIST = [
   {
     id: 'potenciais',
     num: '05',
-    title: 'Potenciais Padrão E° e Série Eletroquímica',
+    title: 'Potenciais Padrão E° e série de potenciais de redução',
     subtitle: 'Elétrodo Padrão de Hidrogénio, cálculo da fem e relação com ΔG°',
     readTime: '5 min',
     tag: 'Termodinâmica',
@@ -170,7 +170,7 @@ CZ.CODEX_LIST = [
         E°célula = E°(cátodo, redução) − E°(ânodo, redução)
         <br/>ΔG° = −n · F · E°célula     (com F = 96 485 C·mol⁻¹)
       </div>
-      <h3>Como Ler a Série Eletroquímica num Segundo</h3>
+      <h3>Como Ler a série de potenciais de redução num Segundo</h3>
       <ul>
         <li><strong>Maior E° (ex.: Au³⁺/Au = +1,50 V):</strong> Forte tendência para sofrer redução → a forma oxidada (<code>Au³⁺</code>) é um <strong>oxidante forte</strong>; o metal (<code>Au</code>) é muito pouco reativo (nobre).</li>
         <li><strong>Menor E° (ex.: Li⁺/Li = −3,04 V):</strong> Forte tendência para sofrer oxidação → a forma reduzida (<code>Li</code>) é um <strong>redutor fortíssimo</strong>.</li>
@@ -298,7 +298,7 @@ CZ.CODEX_LIST = [
     readTime: '5 min',
     tag: 'Tecnologia',
     html: `
-      <p>Na linguagem científica, uma <strong>bateria</strong> é uma associação de várias células eletroquímicas ligadas em série (para somar tensões) ou em paralelo (para somar capacidades de corrente).</p>
+      <p>Na linguagem científica, uma <strong>bateria</strong> é uma associação de várias células químicas ligadas em série (para somar tensões) ou em paralelo (para somar capacidades de corrente).</p>
       <table class="codex-table">
         <thead>
           <tr><th>Tecnologia</th><th>Tensão/Célula</th><th>Tipo</th><th>Destaques Químicos</th></tr>
@@ -322,7 +322,7 @@ CZ.CODEX_LIST = [
         'Porque multiplica o potencial usando água destilada'
       ],
       a: 0,
-      exp: 'Ligar células eletroquímicas em série soma as respetivas forças eletromotrizes individuais.'
+      exp: 'Ligar células químicas em série soma as respetivas forças eletromotrizes individuais.'
     }
   },
   {
@@ -339,7 +339,7 @@ CZ.CODEX_LIST = [
         <br/>Zona Catódica:   O₂(g) + 2 H₂O(l) + 4 e⁻ → 4 OH⁻(aq)
         <br/>Precipitação e oxidação posterior → Fe₂O₃ · x H₂O(s) (ferrugem porosa, não protetora!)
       </div>
-      <h3>Estratégias Eletroquímicas de Combate à Corrosão</h3>
+      <h3>Estratégias químicas de Combate à Corrosão</h3>
       <ul>
         <li><strong>Barreiras físicas:</strong> Pinturas epóxi, esmaltes, vernizes ou óleos (impedem o contacto com O₂ e H₂O).</li>
         <li><strong>Passivação e Anodização:</strong> Metais como o alumínio e o crómio (no aço inoxidável) formam espontaneamente uma película de óxido impermeável e autorregenerável (<code>Al₂O₃</code>, <code>Cr₂O₃</code>).</li>
