@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Ecrãs Principais: Intro, Hub, Perfil, Glossário & Certificado (screens.js)
+   CÉLULAS QUÍMICAS — Ecrãs Principais: Intro, Hub, Perfil, Glossário & Certificado (screens.js)
    ============================================================ */
 
 function renderIntro(root) {
@@ -11,13 +11,13 @@ function renderIntro(root) {
         <div>
           <div class="kicker">
             <span class="kicker-dot"></span>
-            FÍSICO-QUÍMICA · CÉLULAS ELETROQUÍMICAS
+            FÍSICO-QUÍMICA · CÉLULAS QUÍMICAS
           </div>
           <h1 class="intro-title">
-            Descobre como as <span class="grad">células eletroquímicas</span> transformam energia.
+            Descobre como as <span class="grad">células químicas</span> transformam energia.
           </h1>
           <p class="intro-story">
-            Explora as <strong>células eletroquímicas</strong> e aprende como funcionam as pilhas e a eletrólise. Vais conhecer as reações de <strong>oxidação-redução</strong>, os elétrodos, a ponte salina, os potenciais elétricos e a equação de Nernst através de explicações, experiências interativas e desafios.
+            Explora as <strong>células químicas</strong> e aprende como funcionam as pilhas e a eletrólise. Vais conhecer as reações de <strong>oxidação-redução</strong>, os elétrodos, a ponte salina, os potenciais elétricos e a equação de Nernst através de explicações, experiências interativas e desafios.
           </p>
 
           <div class="intro-cta-row">
@@ -56,7 +56,7 @@ function renderIntro(root) {
         </div>
 
         <div class="reactor-showcase" id="reactor-card">
-          <svg class="reactor-svg" id="reactor-svg" viewBox="0 0 400 400" aria-label="Núcleo Reator célula eletroquímica">
+          <svg class="reactor-svg" id="reactor-svg" viewBox="0 0 400 400" aria-label="Núcleo Reator célula química">
             <defs>
               <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stop-color="#5eead4" stop-opacity="0.55"/>
@@ -190,7 +190,7 @@ function renderHub(root) {
           </svg>
           <div style="font-size:0.84rem;color:var(--text-soft)">
             ${integ.pct === 100
-              ? 'célula eletroquímica estabilizada! Certificado de Excelência disponível.'
+              ? 'célula química estabilizada! Certificado de Excelência disponível.'
               : 'Repara os conteúdos por estudar para compreender a célula.'}
           </div>
         </div>
@@ -418,7 +418,7 @@ function renderProfile(root) {
 function openHowToPlay() {
   openModal(`
     <div class="kicker"><span class="kicker-dot"></span> MANUAL DO OPERADOR</div>
-    <h2 class="section-title" style="font-size:1.75rem">Como Funciona o CÉLULAS ELETROQUÍMICAS</h2>
+    <h2 class="section-title" style="font-size:1.75rem">Como Funciona o CÉLULAS QUÍMICAS</h2>
     <p style="color:var(--text-soft)">
       Este projeto substitui os slides tradicionais por um laboratório interativo e jogo científico em tempo real:
     </p>
@@ -447,7 +447,7 @@ function openPresentationGuide() {
       Usa estes atalhos diretos enquanto explicas à turma e ao professor — sem precisares de um único slide PowerPoint:
     </p>
     <ol style="color:var(--text-soft);line-height:1.75;padding-left:20px">
-      <li><strong>Min 0–1 · Impacto Visual (Intro):</strong> Mostra o célula eletroquímica e coloca a questão central: <em>«Como transformar uma reação espontânea de oxidação-redução numa corrente elétrica controlada?»</em></li>
+      <li><strong>Min 0–1 · Impacto Visual (Intro):</strong> Mostra o célula química e coloca a questão central: <em>«Como transformar uma reação espontânea de oxidação-redução numa corrente elétrica controlada?»</em></li>
       <li><strong>Min 1–3 · Anatomia da Pilha de Daniell:</strong> <a href="#/mission/m1" onclick="closeModal()" style="color:var(--teal)">Abrir Módulo 01 →</a> Clica no ânodo de Zn, cátodo de Cu, fio externo e ponte salina de KNO₃ explicando porque os eletrões vão pelo fio e os iões pela ponte.</li>
       <li><strong>Min 3–6 · Demonstração Ao Vivo no Simulador:</strong> <a href="#/lab" onclick="closeModal()" style="color:var(--teal)">Abrir Simulador →</a>
         <ul>
@@ -476,7 +476,7 @@ function openCertificateModal() {
   openModal(`
     <div class="certificate">
       <div class="cert-seal">${icon('award')}</div>
-      <div class="cert-kicker">UNIDADE CIENTÍFICA CÉLULAS ELETROQUÍMICAS · PROTOCOLO ELETROQUÍMICO</div>
+      <div class="cert-kicker">UNIDADE CIENTÍFICA CÉLULAS QUÍMICAS · PROTOCOLO ELETROQUÍMICO</div>
       <h2 class="cert-title">Certificado de Proficiência em Eletroquímica</h2>
       <p style="margin:4px 0 0;color:var(--text-muted);font-size:0.9rem">Certifica-se que o(a) operador(a)</p>
       <div class="cert-name">${esc(S.operatorName)}</div>
