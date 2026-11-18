@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULA ZERO — Leitor do Arquivo Científico, Widgets & Calculadoras (codex.js)
+   CÉLULAS ELETROQUÍMICAS — Leitor do Arquivo Científico, Widgets & Calculadoras (codex.js)
    ============================================================ */
 
 function mountCodexWidget(container, type) {
