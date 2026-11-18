@@ -1,8 +1,8 @@
-# Células Eletroquímicas — Físico-Química
+# Células Químicas — Físico-Química
 
 Site-jogo interativo, imersivo e totalmente em **português de Portugal (PT-PT)** sobre **células químicas / eletroquímica**, criado para uma apresentação escolar de excelência (**nota 20**) — sem slides, sem instalações e sem dependências externas em tempo de execução.
 
-> Recurso interativo de apoio a uma apresentação escolar sobre células eletroquímicas: pilhas galvânicas, eletrólise, oxidação-redução, elétrodos e potenciais elétricos.
+> Recurso interativo de apoio a uma apresentação escolar sobre células químicas: pilhas galvânicas, eletrólise, oxidação-redução, elétrodos e potenciais elétricos.
 
 ---
 
@@ -97,7 +97,7 @@ Também disponível dentro do site no botão **“Guião de apresentação”**.
 ├── data.js          # metais/E°, missões, quiz (40), boss (16), glossário (30)
 ├── codex-data.js    # 12 capítulos científicos e checkpoints
 ├── core.js          # estado/XP, som WebAudio, router, WebGL, partículas e FX
-├── cell.js          # diagrama SVG animado da célula eletroquímica
+├── cell.js          # diagrama SVG animado da célula química
 ├── screens.js       # intro, hub, glossário, perfil e certificado
 ├── codex.js         # leitor do Arquivo, leitura em voz alta e calculadoras
 ├── missions.js      # simulador livre e missões 1–6
