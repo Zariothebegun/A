@@ -1,8 +1,8 @@
-# CÉLULA ZERO — Protocolo Eletroquímico 2087
+# Células Eletroquímicas — Físico-Química
 
 Site-jogo interativo, imersivo e totalmente em **português de Portugal (PT-PT)** sobre **células químicas / eletroquímica**, criado para uma apresentação escolar de excelência (**nota 20**) — sem slides, sem instalações e sem dependências externas em tempo de execução.
 
-> Em 2087, a entidade entrópica **O Corrosor** infetou a Célula Mestra. O jogador repara seis módulos científicos, usa um simulador eletroquímico em tempo real e enfrenta o boss final para restaurar a corrente.
+> Recurso interativo de apoio a uma apresentação escolar sobre células eletroquímicas: pilhas galvânicas, eletrólise, oxidação-redução, elétrodos e potenciais elétricos.
 
 ---
 
@@ -28,8 +28,8 @@ Basta abrir o endereço em qualquer navegador moderno (Chrome, Edge, Firefox ou 
 
 | Rota | Experiência |
 |---|---|
-| `#/` | Intro cinematográfica 2087 com reator animado e telemetria |
-| `#/hub` | Mapa de missões e integridade da Célula Mestra |
+| `#/` | Introdução ao tema e conceitos fundamentais |
+| `#/hub` | Mapa de conteúdos e desafios |
 | `#/mission/m1` | **Módulo 01 — Anatomia da Célula:** 7 componentes interativos da Pilha de Daniell |
 | `#/mission/m2` | **Módulo 02 — Caça-Eletrões:** jogo arcade Verdadeiro/Falso com timer, vidas e combo |
 | `#/mission/m3` | **Módulo 03 — Engenharia de Pilhas:** 4 contratos no simulador |
@@ -60,7 +60,7 @@ Basta abrir o endereço em qualquer navegador moderno (Chrome, Edge, Firefox ou 
 
 ## Guião rápido de apresentação (8–12 minutos)
 
-Também disponível dentro do site no botão **“Guião 20”**.
+Também disponível dentro do site no botão **“Guião de apresentação”**.
 
 1. **0–1 min — Intro (`#/`):** apresenta o problema: como transformar uma reação redox espontânea em corrente elétrica útil?
 2. **1–3 min — Módulo 01 (`#/mission/m1`):** clica no ânodo de zinco, cátodo de cobre, fio externo e ponte salina. Sublinha: **eletrões pelo fio; iões pela ponte salina**.
