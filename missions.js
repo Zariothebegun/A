@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULA ZERO — Simulador Livre (#/lab) e Missões 1 a 6 (missions.js)
+   CÉLULAS ELETROQUÍMICAS — Simulador (#/lab) e Missões 1 a 6 (missions.js)
    ============================================================ */
 
 function renderLab(root) {
