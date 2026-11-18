@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULA ZERO — Ecrãs Principais: Intro, Hub, Perfil, Glossário & Certificado (screens.js)
+   CÉLULAS ELETROQUÍMICAS — Ecrãs Principais: Intro, Hub, Perfil, Glossário & Certificado (screens.js)
    ============================================================ */
 
 function renderIntro(root) {
@@ -11,17 +11,13 @@ function renderIntro(root) {
         <div>
           <div class="kicker">
             <span class="kicker-dot"></span>
-            UNIDADE DE DEFESA ELETROQUÍMICA · LISBOA 2087
+            FÍSICO-QUÍMICA · CÉLULAS ELETROQUÍMICAS
           </div>
           <h1 class="intro-title">
-            Salva a <span class="grad">Célula Mestra</span> da oxidação total.
+            Descobre como as <span class="grad">células eletroquímicas</span> transformam energia.
           </h1>
           <p class="intro-story">
-            Em <strong>2087</strong>, toda a rede energética limpa depende da <strong>Célula Zero</strong>.
-            Uma anomalia entrópica conhecida como <strong>O Corrosor</strong> sabotou as pontes salinas,
-            inverteu potenciais de elétrodo e acelerou a ferrugem do reator central.
-            Domina as leis da <strong>oxidação-redução, pilhas galvânicas, equação de Nernst e eletrólise</strong>
-            ao longo de seis módulos interativos para restaurar a corrente!
+            Explora as <strong>células eletroquímicas</strong> e aprende como funcionam as pilhas e a eletrólise. Vais conhecer as reações de <strong>oxidação-redução</strong>, os elétrodos, a ponte salina, os potenciais elétricos e a equação de Nernst através de explicações, experiências interativas e desafios.
           </p>
 
           <div class="intro-cta-row">
@@ -194,7 +190,7 @@ function renderHub(root) {
           </svg>
           <div style="font-size:0.84rem;color:var(--text-soft)">
             ${integ.pct === 100
-              ? 'Célula Mestra estabilizada! Certificado de Excelência disponível.'
+              ? 'célula eletroquímica estabilizada! Certificado de Excelência disponível.'
               : 'Repara os módulos infetados para purificar o reator.'}
           </div>
         </div>
@@ -422,13 +418,13 @@ function renderProfile(root) {
 function openHowToPlay() {
   openModal(`
     <div class="kicker"><span class="kicker-dot"></span> MANUAL DO OPERADOR</div>
-    <h2 class="section-title" style="font-size:1.75rem">Como Funciona o CÉLULA ZERO</h2>
+    <h2 class="section-title" style="font-size:1.75rem">Como Funciona o CÉLULAS ELETROQUÍMICAS</h2>
     <p style="color:var(--text-soft)">
       Este projeto substitui os slides tradicionais por um laboratório interativo e jogo científico em tempo real:
     </p>
     <div style="display:grid;gap:12px;margin:18px 0">
       <div class="callout" style="margin:0">
-        <strong>1. Seis Módulos Narrativos (#/hub):</strong> Inspeciona a anatomia da célula, caça eletrões em modo arcade, cumpre contratos de engenharia no simulador, prevê reações espontâneas, supera o quiz com power-ups e derrota <em>O Corrosor</em>.
+        <strong>1. Seis Módulos Narrativos (#/hub):</strong> Inspeciona a anatomia da célula, caça eletrões em modo arcade, cumpre contratos de engenharia no simulador, prevê reações espontâneas, supera o quiz com power-ups e derrota <em>desafio final</em>.
       </div>
       <div class="callout" style="margin:0">
         <strong>2. Simulador Eletroquímico Completo (#/lab):</strong> Testa 10 semicélulas reais (Li a Au), altera concentrações e temperatura (Equação de Nernst em direto!), retira a ponte salina ou comuta para Eletrólise. Pressiona a tecla <code>E</code> para ecrã inteiro!
@@ -461,7 +457,7 @@ function openPresentationGuide() {
         </ul>
       </li>
       <li><strong>Min 6–8 · Aplicações Reais &amp; Calculadoras:</strong> <a href="#/codex/eletrolise" onclick="closeModal()" style="color:var(--teal)">Abrir Leis de Faraday →</a> e <a href="#/codex/ambiente" onclick="closeModal()" style="color:var(--teal)">Corrosão / Ânodo de Sacrifício →</a>.</li>
-      <li><strong>Min 8–11 · Interação com a Turma:</strong> <a href="#/mission/m2" onclick="closeModal()" style="color:var(--teal)">Caça-Eletrões →</a> ou <a href="#/mission/m6" onclick="closeModal()" style="color:var(--teal)">Boss Final: O Corrosor →</a> convidando colegas/professor a responder!</li>
+      <li><strong>Min 8–11 · Interação com a Turma:</strong> <a href="#/mission/m2" onclick="closeModal()" style="color:var(--teal)">Caça-Eletrões →</a> ou <a href="#/mission/m6" onclick="closeModal()" style="color:var(--teal)">Boss Final: desafio final →</a> convidando colegas/professor a responder!</li>
     </ol>
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:16px">
       <a href="#/lab" onclick="closeModal()" class="btn btn-primary">${icon('beaker')} Ir para o Simulador</a>
@@ -480,7 +476,7 @@ function openCertificateModal() {
   openModal(`
     <div class="certificate">
       <div class="cert-seal">${icon('award')}</div>
-      <div class="cert-kicker">UNIDADE CIENTÍFICA CÉLULA ZERO · PROTOCOLO ELETROQUÍMICO</div>
+      <div class="cert-kicker">UNIDADE CIENTÍFICA CÉLULAS ELETROQUÍMICAS · PROTOCOLO ELETROQUÍMICO</div>
       <h2 class="cert-title">Certificado de Proficiência em Eletroquímica</h2>
       <p style="margin:4px 0 0;color:var(--text-muted);font-size:0.9rem">Certifica-se que o(a) operador(a)</p>
       <div class="cert-name">${esc(S.operatorName)}</div>
