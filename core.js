@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Motor Central: Estado, Som, Router, WebGL & FX (core.js)
+   células químicas — Motor Central: Estado, Som, Router, WebGL & FX (core.js)
    ============================================================ */
 
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
@@ -61,7 +61,7 @@ function defaultState() {
   return {
     operatorName: 'Operador Alfa',
     schoolName: 'Ensino Secundário / Profissional',
-    className: 'Química — Eletroquímica',
+    className: 'Química — química',
     started: false,
     createdAt: new Date().toISOString(),
     xp: 0,
@@ -216,7 +216,7 @@ const Sound = (() => {
 })();
 
 /* ============================================================
-   TOASTS, MODAIS & CONFETTI ELETROQUÍMICO
+   TOASTS, MODAIS & CONFETTI químico
    ============================================================ */
 function toast(title, sub = '', iconName = 'sparkles') {
   const stack = $('#toast-stack');
