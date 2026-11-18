@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULA ZERO — Palco Vetorial Interativo da Célula Eletroquímica (cell.js)
+   CÉLULAS ELETROQUÍMICAS — Palco Vetorial Interativo da Célula Eletroquímica (cell.js)
    createCellStage(container, opts) — Animação física em tempo real
    ============================================================ */
 
