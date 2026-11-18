@@ -449,6 +449,9 @@ function router() {
 
   if (parts.length === 0) {
     renderIntro(app);
+  } else if (parts[0] === 'quiz') {
+    if (typeof window.handleQuizRoute === 'function') window.handleQuizRoute(app);
+    else app.innerHTML = '<div class="container"><p>A carregar o modo de jogo…</p></div>';
   } else if (parts[0] === 'hub') {
     renderHub(app);
   } else if (parts[0] === 'lab') {
