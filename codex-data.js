@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULA ZERO — Arquivo Científico Completo: 12 Capítulos (codex-data.js)
+   CÉLULAS ELETROQUÍMICAS — Arquivo Científico Completo: 12 Capítulos (codex-data.js)
    Rigor de 12.º Ano / Ensino Secundário & Profissional (PT-PT)
    ============================================================ */
 window.CZ = window.CZ || {};
