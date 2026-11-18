@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Conteúdos de Físico-Química (data.js)
+   CÉLULAS QUÍMICAS — Conteúdos de Físico-Química (data.js)
    Tudo rigorosamente em Português de Portugal (PT-PT)
    ============================================================ */
 window.CZ = window.CZ || {};
@@ -119,7 +119,7 @@ CZ.MISSIONS = [
   {
     id: 'm6', code: 'DESAFIO FINAL', title: 'Desafio Final',
     icon: 'skull', accent: '#fb7185', xp: 350, desafio: true,
-    desc: 'Resolve o desafio final com perguntas sobre os conceitos fundamentais das células eletroquímicas.'
+    desc: 'Resolve o desafio final com perguntas sobre os conceitos fundamentais das células químicas.'
   }
 ];
 
@@ -135,7 +135,7 @@ CZ.LEVELS = [
 ];
 
 CZ.BADGES = [
-  { id: 'first_spark', icon: 'bolt', title: 'Primeira Faísca', desc: 'Concluíste o primeiro módulo de estudo das células eletroquímicas.' },
+  { id: 'first_spark', icon: 'bolt', title: 'Primeira Faísca', desc: 'Concluíste o primeiro módulo de estudo das células químicas.' },
   { id: 'anatomist', icon: 'atom', title: 'Cirurgião Galvânico', desc: 'Diagnosticaste todos os 7 componentes da célula sem falhas.' },
   { id: 'electron_hunter', icon: 'flame', title: 'Combo Quântico', desc: 'Atingiste uma série de 6 respostas seguidas no Caça-Eletrões.' },
   { id: 'daniell_master', icon: 'beaker', title: 'Mestre de Daniell', desc: 'Cumpriste todos os contratos de Engenharia de Pilhas.' },
@@ -334,7 +334,7 @@ CZ.QUIZ = [
     q: 'Qual é a afirmação universalmente verdadeira tanto para células galvânicas como para células eletrolíticas?',
     o: ['O ânodo é sempre o elétrodo negativo (−)', 'Os eletrões circulam sempre através da solução aquosa', 'A oxidação ocorre sempre no ânodo e a redução ocorre sempre no cátodo', 'A força eletromotriz padrão é sempre negativa'],
     a: 2, hint: 'Pensa na regra vogal-vogal / consoante-consoante.',
-    exp: 'Por definição IUPAC, o ânodo é o local da oxidação e o cátodo é o local da redução em qualquer célula eletroquímica; apenas o sinal (+/−) inverte entre pilha e eletrólise.'
+    exp: 'Por definição IUPAC, o ânodo é o local da oxidação e o cátodo é o local da redução em qualquer célula química; apenas o sinal (+/−) inverte entre pilha e eletrólise.'
   },
   {
     id: 3, topic: 'galvanica', diff: 1,
