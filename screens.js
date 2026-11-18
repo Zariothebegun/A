@@ -22,7 +22,7 @@ function renderIntro(root) {
 
           <div class="intro-cta-row">
             <button type="button" class="btn btn-primary btn-lg" id="btn-start">
-              ${icon('play')} ${S.started ? 'Continuar Operação' : 'Iniciar Protocolo'}
+              ${icon('play')} ${S.started ? 'Continuar estudo' : 'Começar'}
             </button>
             <a href="#/lab" class="btn btn-lg" id="btn-go-lab">
               ${icon('beaker')} Simulador de Pilhas
@@ -38,7 +38,7 @@ function renderIntro(root) {
           <div class="intro-metrics">
             <div class="metric-tile">
               <strong>6</strong>
-              <span>Missões + Boss</span>
+              <span>Missões + Desafio</span>
             </div>
             <div class="metric-tile">
               <strong>10</strong>
@@ -56,7 +56,7 @@ function renderIntro(root) {
         </div>
 
         <div class="reactor-showcase" id="reactor-card">
-          <svg class="reactor-svg" id="reactor-svg" viewBox="0 0 400 400" aria-label="Núcleo Reator Célula Zero">
+          <svg class="reactor-svg" id="reactor-svg" viewBox="0 0 400 400" aria-label="Núcleo Reator célula eletroquímica">
             <defs>
               <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stop-color="#5eead4" stop-opacity="0.55"/>
@@ -101,7 +101,7 @@ function renderIntro(root) {
               <strong>+1,10 V → +4,54 V</strong>
             </div>
             <div class="tele-box ${integ.pct < 100 ? 'is-warn' : ''}">
-              <small>Estado Corrosor</small>
+              <small>Estado corrosão</small>
               <strong>${integ.pct === 100 ? 'NEUTRALIZADO' : 'ATIVO'}</strong>
             </div>
           </div>
@@ -154,7 +154,7 @@ function renderHub(root) {
       `<span class="${i <= (ms.stars || 0) ? 'is-lit' : ''}">${icon('star')}</span>`
     ).join('');
     return `
-      <a href="#/mission/${esc(m.id)}" class="mission-card ${ms.done ? 'is-done' : ''} ${m.boss ? 'is-boss' : ''}" style="--m-accent:${esc(m.accent)}">
+      <a href="#/mission/${esc(m.id)}" class="mission-card ${ms.done ? 'is-done' : ''} ${m.desafio ? 'is-desafio' : ''}" style="--m-accent:${esc(m.accent)}">
         <div>
           <div class="mc-head">
             <span class="mc-icon">${icon(m.icon)}</span>
@@ -177,7 +177,7 @@ function renderHub(root) {
     <div class="container view-enter">
       <div class="hub-top">
         <div class="glass-card master-core-card">
-          <div class="kicker"><span class="kicker-dot"></span> NÚCLEO MESTRE</div>
+          <div class="kicker"><span class="kicker-dot"></span> CÉLULA ELETROQUÍMICA</div>
           <svg class="master-core-svg" viewBox="0 0 200 200">
             <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(148,163,184,0.16)" stroke-width="10"/>
             <circle cx="100" cy="100" r="82" fill="none" stroke="${coreColor}" stroke-width="10"
@@ -191,16 +191,16 @@ function renderHub(root) {
           <div style="font-size:0.84rem;color:var(--text-soft)">
             ${integ.pct === 100
               ? 'célula eletroquímica estabilizada! Certificado de Excelência disponível.'
-              : 'Repara os módulos infetados para purificar o reator.'}
+              : 'Repara os conteúdos por estudar para compreender a célula.'}
           </div>
         </div>
 
         <div class="glass-card hub-brief">
           <div>
             <div class="kicker"><span class="kicker-dot"></span> CENTRAL DE OPERAÇÕES · ${esc(lvl.title)}</div>
-            <h1 class="section-title" style="margin-bottom:8px">Mapa de Reparação Eletroquímica</h1>
+            <h1 class="section-title" style="margin-bottom:8px">Percurso de Aprendizagem em Eletroquímica</h1>
             <p class="section-lead">
-              Podes avançar pela ordem narrativa (Módulo 01 → Boss Final) ou abrir diretamente qualquer módulo,
+              Podes avançar pela ordem narrativa (Módulo 01 → Desafio Final) ou abrir diretamente qualquer módulo,
               o <strong>Simulador Livre</strong> ou o <strong>Arquivo Científico</strong> durante a tua apresentação.
             </p>
           </div>
@@ -447,7 +447,7 @@ function openPresentationGuide() {
       Usa estes atalhos diretos enquanto explicas à turma e ao professor — sem precisares de um único slide PowerPoint:
     </p>
     <ol style="color:var(--text-soft);line-height:1.75;padding-left:20px">
-      <li><strong>Min 0–1 · Impacto Visual (Intro):</strong> Mostra o reator 2087 e coloca a questão central: <em>«Como transformar uma reação espontânea de oxidação-redução numa corrente elétrica controlada?»</em></li>
+      <li><strong>Min 0–1 · Impacto Visual (Intro):</strong> Mostra o célula eletroquímica e coloca a questão central: <em>«Como transformar uma reação espontânea de oxidação-redução numa corrente elétrica controlada?»</em></li>
       <li><strong>Min 1–3 · Anatomia da Pilha de Daniell:</strong> <a href="#/mission/m1" onclick="closeModal()" style="color:var(--teal)">Abrir Módulo 01 →</a> Clica no ânodo de Zn, cátodo de Cu, fio externo e ponte salina de KNO₃ explicando porque os eletrões vão pelo fio e os iões pela ponte.</li>
       <li><strong>Min 3–6 · Demonstração Ao Vivo no Simulador:</strong> <a href="#/lab" onclick="closeModal()" style="color:var(--teal)">Abrir Simulador →</a>
         <ul>
@@ -457,7 +457,7 @@ function openPresentationGuide() {
         </ul>
       </li>
       <li><strong>Min 6–8 · Aplicações Reais &amp; Calculadoras:</strong> <a href="#/codex/eletrolise" onclick="closeModal()" style="color:var(--teal)">Abrir Leis de Faraday →</a> e <a href="#/codex/ambiente" onclick="closeModal()" style="color:var(--teal)">Corrosão / Ânodo de Sacrifício →</a>.</li>
-      <li><strong>Min 8–11 · Interação com a Turma:</strong> <a href="#/mission/m2" onclick="closeModal()" style="color:var(--teal)">Caça-Eletrões →</a> ou <a href="#/mission/m6" onclick="closeModal()" style="color:var(--teal)">Boss Final: desafio final →</a> convidando colegas/professor a responder!</li>
+      <li><strong>Min 8–11 · Interação com a Turma:</strong> <a href="#/mission/m2" onclick="closeModal()" style="color:var(--teal)">Caça-Eletrões →</a> ou <a href="#/mission/m6" onclick="closeModal()" style="color:var(--teal)">Desafio Final: desafio final →</a> convidando colegas/professor a responder!</li>
     </ol>
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:16px">
       <a href="#/lab" onclick="closeModal()" class="btn btn-primary">${icon('beaker')} Ir para o Simulador</a>
