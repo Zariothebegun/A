@@ -1,5 +1,5 @@
 /* ============================================================
-   CÉLULAS ELETROQUÍMICAS — Palco Vetorial Interativo da Célula Eletroquímica (cell.js)
+   células químicas — Palco Vetorial Interativo da célula química (cell.js)
    createCellStage(container, opts) — Animação física em tempo real
    ============================================================ */
 
@@ -99,7 +99,7 @@ function createCellStage(container, opts = {}) {
     </div>
 
     <div class="cell-svg-wrap">
-      <svg class="cell-svg" viewBox="0 0 800 430" role="img" aria-label="Diagrama interativo da célula eletroquímica">
+      <svg class="cell-svg" viewBox="0 0 800 430" role="img" aria-label="Diagrama interativo da célula química">
         <defs>
           <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stop-color="rgba(255,255,255,0.16)"/>
